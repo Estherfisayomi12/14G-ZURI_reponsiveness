@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 90%;
+}
+
+body{
+    font-family: 'Poppins', 'sans';
+    background-color: aliceblue;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.container{
+    max-width: 1440px;
+    background-image: linear-gradient(to right, hsla(0, 100%, 74%, .7), hsla(0, 100%, 74%, .7)), url(/img/bg-intro-desktop.png);
+    background-size: cover;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+@media only screen and (max-width:800px){
+    html{
+        font-size: 80%;
+    }
+
+    .container{
+        background-image: linear-gradient(to right, hsla(0, 100%, 74%, .7), hsla(0, 100%, 74%, .7)), url(/img/bg-intro-mobile.png);
+        grid-template-columns: none;
+        grid-template-rows: [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end];
+
+        grid-row-gap: 0rem;
+
+      
+    }
+
+    .learn_code{
+        grid-row: center-start /col-end 3;
+
+        display: grid;
+        text-align: center;
+
+        margin: 0 7rem;
+
+    }
+
+    .form_register{
+        grid-row: col-start 4/ col-end 6;
+        margin: 0 7rem;
+
+        align-content: start;    
+    }
+}
+
+
+@media only screen and (max-width: 375px){
+
+    html{
+        font-size: 62.5%;
+    }
+
+    .container{
+        background-image: linear-gradient(to right, hsla(0, 100%, 74%, .7), hsla(0, 100%, 74%, .7)), url(/img/bg-intro-mobile.png);
+        background-size: cover;
+  
+        grid-template-columns: none;
+        grid-template-rows: [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end];
+
+        grid-row-gap: 0rem;
+
+      
+    }
+
+    .learn_code{
+        grid-row: center-start /col-end 3;
+
+        display: grid;
+        text-align: center;
+
+        margin: 0 3rem;
+
+    }
+
+    .paragraph{
+        font-size: 2rem;
+    }
+
+    .form_register{
+        grid-row: col-start 4/ col-end 6;
+        margin: 0 3rem;
+
+        align-content: start;    
+    }
+
+    .btn{
+        padding: 2rem 2rem !important;
+        font-size: 1.9rem;
+        line-height: 1.4;
+    }
+
+    .btn-green{
+        padding: 2rem 2rem !important;
+        font-size: 1.4rem;
+    }
+
+    .form{
+        padding: 20rem;
+    }
+
+    .form p{
+        font-size: 1.3rem;
+        
+    }
+}
+
+
+
+.learn_code{
+    grid-column: center-start/ col-start 4;
+
+    color: #fff;
+
+    display: grid;
+    align-content: center;
+    grid-gap: 2rem;
+
+}
+
+.heading-1{
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+.paragraph{
+    display: grid;
+}
+
+.form_register{
+    grid-column: col-start 5 / center-end;
+
+    text-align: center;
+
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-row-gap: 1.5rem;
+    /* justify-content: center; */
+}
+
+.btn{
+    padding: 1.8rem 2rem;
+    color: #fff;
+    background-color: hsl(248, 32%, 49%);
+    
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.486);
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.btn-green{
+    background-color: hsl(154, 59%, 51%);
+    box-shadow: none;
+}
+
+.form,
+.form:active{
+    background-color: #fff;
+
+    display: grid;
+    grid-gap: 2rem;
+    padding: 4rem;
+    border-radius: 8px;
+
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.486);
+
+}
+
+.input-box{
+    text-align: end;
+}
+
+.input-box.success input{
+    border: 2px solid #2ecc71;
+
+}
+
+.input-box.error input{
+    border: 2px solid #e74c3c;
+    margin-top: 0rem;
+    
+}
+
+.input-box.error small{
+    color: #e74c3c;
+    visibility: visible;
+    margin-bottom: 3rem;
+
+}
+
+.input-box small{
+    visibility: hidden;
+    bottom: 0;
+    font-style: italic;
+
+}
+
+.input,
+.input:active{
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.436);
+    width: 100%;
+
+}
+
+.form a{
+    display: inline;
+    text-decoration: none;
+    color: red;
+
+    
+}
+
+.form p{
+    color: hsl(246, 25%, 77%);
+}
